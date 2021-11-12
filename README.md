@@ -1,3 +1,3 @@
 # sniffProject
 
-studing project
+studying project
