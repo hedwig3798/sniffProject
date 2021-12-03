@@ -1,21 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <netinet/udp.h>
+#include <netinet/tcp.h>
+#include <netinet/ip.h>
+#include <netinet/if_ether.h>
 #include <sys/socket.h>
-
-
+#include <sys/types.h>
+#include <arpa/inet.h>
 #define BUF_SIZE 65536
 
-int scok = 0;
+int rawsocket = 0;
 
 int menu(); // menu function
 int packet_chaptuer();
 
 
 int main () {
-	int choosen = 0;
-	choosen = menu();
+	packet_chaptuer();
 }
 
 
@@ -33,24 +35,28 @@ int menu() {
 int packet_chaptuer(){
 	struct sockaddr addr;
 	int addrLen = sizeof(addr);
-	int packet = 0;
-	
+	int buf_len = 0;
 	unsigned char* buf = (unsigned char*) malloc(BUF_SIZE);
 
-	sock = socket(AF_PACKET, SOCK_RAW, htons(ETH_P_ALL));
+	rawsocket = socket(AF_PACKET, SOCK_RAW, htons(ETH_P_ALL));
 
-	if (sock < 0){
+	if (rawsocket < 0){
 		printf("end chahptuer: sock open error\n");
-		reutrn -1;
-	}
-	
-	packet = recvfrom(sock, buf, 65536, 0, %addr, (socklen_t *)&addrLen);
-	
-	if (packet < 0){
-		printf("end capttuer: recv error \n");
 		return -1;
 	}
+	while(1){
+		buf_len = recvfrom(rawsocket, buf, 65536, 0, &addr, (socklen_t *)&addrLen);
+		if (buf_len < 0){
+	
+			printf("end chaptuer: recvfrom error");
+			return -1;
+		}
+		buf[buf_len] = 0;
 
-
+		printf(buf);
+		printf("\n");
+		printf("catch\n");
+	}
+	
 }
 
