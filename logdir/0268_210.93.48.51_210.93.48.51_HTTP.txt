@@ -1,0 +1,114 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 1500
+ -ID: 3505
+ -ttl: 64
+ -protocol: 6
+ -checksum: 52312
+ -S_IP: 210.93.48.51
+ -D_IP: 10.0.2.15
+
+======== TCP Header ========
+ -s_port: 80
+ -d_port: 48114
+ -seq number: 508070504 -ack number: 2119592869
+======== Data ========
+'..<div.class="p
+op_bottom">');..
+..document.write
+('...<div.class=
+"chk_box_W">');.
+...document.writ
+e('....<input.cl
+ass="".onclick=c
+loseWin1173().ty
+pe="checkbox".na
+me="".value=""/>
+');....document.
+write('....<labe
+l>..............
+.............</l
+abel>');....docu
+ment.write('....
+<input.class="".
+onclick=close7Wi
+n1173().type="ch
+eckbox".name="".
+value=""/>');...
+.document.write(
+'....<label>....
+................
+........</label>
+');....document.
+write('...</div>
+');....document.
+write('...<div.c
+lass="btn_close"
+.onclick="close1
+173();">....</di
+v>');....documen
+t.write('..</div
+>');....document
+.write('.</div>'
+);....document.w
+rite('');..}.fun
+ction.open_pop11
+71(){...document
+.write('....<sty
+le.type="text/cs
+s">');....docume
+nt.write('...lay
+er_pop{.backgrou
+nd:white;.z-inde
+x:9999;.position
+:fixed;.}');....
+document.write('
+...layer_pop..po
+p_top{.padding:0
+.20px;.box-sizin
+g:border-box;.he
+ight:60px;..}');
+....document.wri
+te('...layer_pop
+..pop_top..tit{.
+line-height:60px
+;.}');....docume
+nt.write('...lay
+er_pop..pop_top.
+.btn_close{.curs
+or:pointer;.widt
+h:17px;.height:1
+7px;.background:
+url(http://www.k
+pu.ac.kr/front/i
+mages/btn_close.
+png).no-repeat;.
+position:absolut
+e;.top:22px;.rig
+ht:20px;.}');...
+.document.write(
+'...layer_pop..p
+op_center{.paddi
+ng:30px.20px;.bo
+x-sizing:border-
+box;.}');....doc
+ument.write('...
+layer_pop..pop_b
+ottom{.width:100
+%;.position:abso
+lute;.bottom:0px
+;.left:0px;.bord
+er-top:1px.solid
+.#E5E5E5;.height
+:39px;.padding:0
+.20px;.box-sizin
+g:border-box;.}'
+);....document.w
+rit

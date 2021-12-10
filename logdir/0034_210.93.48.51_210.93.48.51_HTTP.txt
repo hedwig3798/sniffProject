@@ -1,0 +1,205 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 2960
+ -ID: 3374
+ -ttl: 64
+ -protocol: 6
+ -checksum: 39763
+ -S_IP: 210.93.48.51
+ -D_IP: 10.0.2.15
+
+======== TCP Header ========
+ -s_port: 80
+ -d_port: 48104
+ -seq number: -671056024 -ack number: 1706492251
+======== Data ========
+pt.type="text/ja
+vascript".src="/
+front/plugins/jq
+uery.1.11.1.min.
+js"></script>..<
+script.type="tex
+t/javascript".sr
+c="/front/plugin
+s/jquery-ui.1.11
+.2.min.js"></scr
+ipt>..<script.ty
+pe="text/javascr
+ipt".src="/front
+/plugins/jquery-
+migrate.1.2.1.mi
+n.js"></script>.
+.<script.type="t
+ext/javascript".
+src="/front/plug
+ins/jquery.hover
+intent.1.8.1.min
+.js"></script>..
+<script.type="te
+xt/javascript".s
+rc="/front/plugi
+ns/jquery.cookie
+.1.4.1.min.js"><
+/script>..<scrip
+t.type="text/jav
+ascript".src="/f
+ront/plugins/jqu
+ery.iosslider.1.
+3.43.min.js"></s
+cript>..<script.
+type="text/javas
+cript".src="/fro
+nt/plugins/jquer
+y.mousewheel-3.1
+.12.js"></script
+>..<script.type=
+"text/javascript
+".src="/front/pl
+ugins/jquery.jca
+rousellite.1.1.m
+in.js"></script>
+..<script.type="
+text/javascript"
+.src="/front/scr
+ipts/default.js"
+></script>..<scr
+ipt.type="text/j
+avascript".src="
+/front/scripts/i
+ndex.js"></scrip
+t>..<script.type
+="text/javascrip
+t".src="/js/comm
+on.js"></script>
+..<script.type="
+text/javascript"
+.src="/js/resize
+.js"></script>..
+<script.type="te
+xt/javascript".s
+rc='/js/cms/main
+/cor/main.js'></
+script>..<script
+.type="text/java
+script".src="./a
+gent_20080423.js
+"></script>..<sc
+ript.type="text/
+javascript".src=
+"/js/front/movie
+cliplist.js"></s
+cript>..<script.
+type="text/javas
+cript".src="/dat
+aview/popup/js/p
+op1.js?202112101
+82640"></script>
+..<script.type="
+text/javascript"
+>..var.subNotice
+Num.=.6;..var.su
+bNoticeIphakNum.
+=.3;..var.rspDat
+a_id.=."null";..
+var.rspData_snn.
+=."null";..var.m
+enuCodeValue;..v
+ar.menuCodeName;
+..menuCodeValue.
+=."000000";..men
+uCodeName.=."";.
+.var.totalCnt.=.
+"44852244";..var
+.toCnt.=."5898";
+..//............
+...........var.u
+Agent.=.navigato
+r.userAgent.toLo
+werCase();..var.
+mobilePhones.=.n
+ew.Array('iphone
+','ipod','androi
+d','blackberry',
+'windows.ce','no
+kia','webos','op
+era.mini','sonye
+ricsson','opera.
+mobi','iemobile'
+);..for(var.i=0;
+i<mobilePhones.l
+ength;i++){...if
+(uAgent.indexOf(
+mobilePhones[i])
+.=-1){........do
+cument.location.
+=."http://m.kpu.
+ac.kr";.......}.
+.}..$(document).
+ready(function()
+{...$("#eventLis
+t").hide();...$(
+"#newsList").sho
+w();...$("#issue
+List").hide();..
+.$("#movieList")
+.show();...$("#t
+abq2").show();..
+.$("#tabq3").sho
+w();...$("#tabq4
+").show();......
+for(var.i=0;.i<6
+;.i++){....if(i>
+0){.....$("#last
+Main"+i).attr('s
+rc',.$("#lastImg
+"+i).val());....
+}...}.........$(
+"#lastVisualMain
+").attr('src',.$
+("#lastVisualImg
+").val());.....}
+);..//-->..</scr
+ipt>..<script.ty
+pe="text/javascr
+ipt">..function.
+SubmitFrom(){...
+document.form10.
+submit();..}..//
+151026..........
+..........functi
+on.goHackers(){.
+..var.f.=.docume
+nt.frmHackers;..
+.f.submit();..}.
+.//160203.......
+.............fun
+ction.goCredu(){
+...var.f.=.docum
+ent.frmCredu;...
+f.submit();..}..
+//160519........
+.........sso....
+...........,....
+......function.g
+oCopyKiller(rUse
+rID,.userType){.
+..if(rUserID==""
+){....alert("...
+................
+..........\n(...
+.....,..........
+................
+...)");...}else.
+if(userType.='4'
+.&&.userType.='5
+'.&&.userType.='
+6'){....alert(".
+.......,........
+.......

@@ -1,0 +1,114 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 1500
+ -ID: 3398
+ -ttl: 64
+ -protocol: 6
+ -checksum: 14169
+ -S_IP: 210.93.48.51
+ -D_IP: 10.0.2.15
+
+======== TCP Header ========
+ -s_port: 80
+ -d_port: 48104
+ -seq number: -1198948504 -ack number: 1706492251
+======== Data ========
+................
+.........<tr.cla
+ss="new.type2">.
+...............<
+td.class="bl.tal
+">..............
+...<a.href="/gop
+age/main/gonotic
+e.jsp?siteGubun=
+1&bbsConfigFK=1&
+pkid=193947&menu
+Gubun=1".class="
+subject".target=
+"_top"><span.cla
+ss="ellipsis">20
+21.......2......
+................
+...........</spa
+n></a>..........
+......</td>.....
+...........<td.c
+lass="tar">.....
+............<spa
+n.class="date">2
+021.12.10</span>
+................
+</td>...........
+....</tr>.......
+................
+................
+.....</tbody>...
+..........</tabl
+e>.............<
+table.id="newsLi
+st".style="displ
+ay:none;">......
+........<.--.<ca
+ption.class="def
+ault"></caption>
+.-->............
+..<colgroup>....
+...........<col.
+class="col.q1">.
+..............<c
+ol.class="col.q2
+">..............
+</colgroup>.....
+.........<tbody>
+................
+..............<t
+r.class="new.typ
+e5">............
+....<td.class="b
+l.tal">.........
+........<a.href=
+"/gopage/main/go
+news.jsp?siteGub
+un=1&bbsConfigFK
+=2&pkid=193950&m
+enuGubun=1".clas
+s="subject"><spa
+n.class="ellipsi
+s">[........]...
+.............(..
+2021-49..)_.....
+..............20
+21..............
+..........(K-MOO
+C)...........</s
+pan></a>........
+........</td>...
+.............<td
+.class="tar">...
+..............<s
+pan.class="date"
+>2021.12.10</spa
+n>..............
+..</td>.........
+......</tr>.....
+................
+.........<tr.cla
+ss="new.type5">.
+...............<
+td.class="bl.tal
+">..............
+...<a.href="/gop
+age/main/gonews.
+jsp?siteGubun=1&
+bbsConfigFK=2&pk
+id=193925&menuGu
+bun=1".class="su
+bje

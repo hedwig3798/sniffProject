@@ -1,0 +1,64 @@
+
+======== Ethernet Header ========
+S_address 08 00 27 C2 A0 C4
+D_address 52 54 00 12 35 02
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 703
+ -ID: 7776
+ -ttl: 64
+ -protocol: 6
+ -checksum: 14859
+ -S_IP: 10.0.2.15
+ -D_IP: 210.93.48.51
+
+======== TCP Header ========
+ -s_port: 48112
+ -d_port: 80
+ -seq number: -1649135828 -ack number: -2000779160
+======== Data ========
+ET./js/common.js
+.HTTP/1.1..Host:
+.www.kpu.ac.kr..
+User-Agent:.Mozi
+lla/5.0.(X11;.Ub
+untu;.Linux.x86_
+64;.rv:94.0).Gec
+ko/20100101.Fire
+fox/94.0..Accept
+:.*/*..Accept-La
+nguage:.en-US,en
+;q=0.5..Accept-E
+ncoding:.gzip,.d
+eflate..Connecti
+on:.keep-alive..
+Referer:.http://
+www.kpu.ac.kr/in
+dex.do?sso=ok..C
+ookie:._ga=GA1.3
+.1315522329.1639
+115326;._gid=GA1
+.3.584639676.163
+9115326;.WT_USER
+_ID=AJeKRkmW2INA
+iyxojgbx5vJdWRME
+xmJ9YNhWe9yYDjm7
+puQFpejKKSJ8nSYA
+t8Cp;.JSESSIONID
+=sDxacL0YLn07im8
+RyqIzv3XrIHAKLjk
+7IXFBlXiPxqscHXJ
+ZpLH2hjRlPMA6s3N
+3;.logNonM=yes;.
+visitUrlGubun=kp
+u_1|..If-Modifie
+d-Since:.Wed,.25
+.Apr.2018.05:37:
+08.GMT..If-None-
+Match:."0-af10-5
+ae01404"..Cache-
+Control:.max-age
+=0....

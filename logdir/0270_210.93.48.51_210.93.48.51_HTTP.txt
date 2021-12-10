@@ -1,0 +1,114 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 1500
+ -ID: 3506
+ -ttl: 64
+ -protocol: 6
+ -checksum: 52056
+ -S_IP: 210.93.48.51
+ -D_IP: 10.0.2.15
+
+======== TCP Header ========
+ -s_port: 80
+ -d_port: 48114
+ -seq number: -766670232 -ack number: 2119592869
+======== Data ========
+('...layer_pop..
+pop_bottom.>..ch
+k_box_W{.}');...
+.document.write(
+'...layer_pop..p
+op_bottom.>..chk
+_box_W.>.*{.line
+-height:39px;.ve
+rtical-align:mid
+dle;.}');....doc
+ument.write('...
+layer_pop..pop_b
+ottom.>..chk_box
+_W.>.label{.colo
+r:#999;.font-siz
+e:12px;.}');....
+document.write('
+...layer_pop..po
+p_bottom.>..btn_
+close{.cursor:po
+inter;.border-le
+ft:1px.solid.#E5
+E5E5;.text-align
+:center;.font-we
+ight:bold;.backg
+round:#F3F3F3;.w
+idth:65px;.color
+:#666;.font-size
+:12px;.line-heig
+ht:38px;.positio
+n:absolute;.top:
+0px;.right:0px;.
+}');....document
+.write('.</style
+>');....document
+.write('.<div.id
+="layer1171".cla
+ss="layer_pop".s
+tyle="position:a
+bsolute;z-index:
+1171;border:2px.
+solid.#1C6DC7;wi
+dth:650px;height
+:420px;left:100p
+x;top:100px;disp
+lay:;overflow:hi
+dden;".">');....
+document.write('
+..<script.langua
+ge="JavaScript">
+.');....document
+.write('..$("#la
+yer1171").dragga
+ble();.');....do
+cument.write('..
+$("#layer1171").
+bind("dragstart"
+,function(event,
+.ui){.$(this).fa
+deTo(500,0.5);.}
+);.');....docume
+nt.write('..$("#
+layer1171").bind
+("dragstop",func
+tion(event,.ui){
+.$(this).fadeTo(
+500,1);.});.');.
+...document.writ
+e('...function.c
+lose1171(){layer
+1171.style.displ
+ay="none";}...')
+;....document.wr
+ite('...function
+.closeWin1171(){
+layer1171.style.
+display="none".;
+.');....document
+.write('.....set
+Cookie(."popName
+1171",."done".,.
+1)}..');....docu
+ment.write('...f
+unction.close7Wi
+n1171(){layer117
+1.style.display=
+"none".;.');....
+document.write('
+.....setCookie(.
+"popName1171",."
+done".,.7)}..');
+...

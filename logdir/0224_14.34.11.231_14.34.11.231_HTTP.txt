@@ -1,0 +1,23 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 44
+ -ID: 3471
+ -ttl: 64
+ -protocol: 6
+ -checksum: 9799
+ -S_IP: 14.34.11.231
+ -D_IP: 10.0.2.15
+
+======== TCP Header ========
+ -s_port: 80
+ -d_port: 46908
+ -seq number: 28478056 -ack number: -1282458809
+======== Data ========
+.....

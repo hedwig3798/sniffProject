@@ -1,0 +1,31 @@
+
+======== Ethernet Header ========
+S_address 00 00 00 00 00 00
+D_address 00 00 00 00 00 00
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 159
+ -ID: 56828
+ -ttl: 64
+ -protocol: 17
+ -checksum: 7006
+ -S_IP: 127.0.0.53
+ -D_IP: 127.0.0.1
+
+======== UDP Header ========
+ -s_port: 53
+ -d_port: 58573
+ -UDP len: 35584 -checksum: 54014
+======== Data ========
+;...........www.
+instagram.com...
+...............g
+eo-p42.../......
+.$...z-p42-insta
+gram.c10r...E...
+.......*.(..V...
+.....D...)......
+..

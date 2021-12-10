@@ -1,0 +1,39 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 297
+ -ID: 3478
+ -ttl: 64
+ -protocol: 6
+ -checksum: 39517
+ -S_IP: 210.93.48.51
+ -D_IP: 10.0.2.15
+
+======== TCP Header ========
+ -s_port: 80
+ -d_port: 48114
+ -seq number: -1984394904 -ack number: 2119592869
+======== Data ========
+TTP/1.1.200.OK..
+Date:.Fri,.10.De
+c.2021.09:26:54.
+GMT..Content-Typ
+e:.application/x
+-javascript..Con
+tent-Length:.706
+78..Connection:.
+keep-alive..Serv
+er:.WebtoB/4.1..
+ETag:."0-11416-6
+1a8706d"..Last-M
+odified:.Thu,.02
+.Dec.2021.07:06:
+21.GMT..Accept-R
+anges:.bytes....
+

@@ -1,0 +1,114 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 1500
+ -ID: 3479
+ -ttl: 64
+ -protocol: 6
+ -checksum: 58968
+ -S_IP: 210.93.48.51
+ -D_IP: 10.0.2.15
+
+======== TCP Header ========
+ -s_port: 80
+ -d_port: 48114
+ -seq number: -1967552152 -ack number: 2119592869
+======== Data ========
+unction.open_pop
+1172(){...docume
+nt.write('....<s
+tyle.type="text/
+css">');....docu
+ment.write('...l
+ayer_pop{.backgr
+ound:white;.z-in
+dex:9999;.positi
+on:fixed;.}');..
+..document.write
+('...layer_pop..
+pop_top{.padding
+:0.20px;.box-siz
+ing:border-box;.
+height:60px;..}'
+);....document.w
+rite('...layer_p
+op..pop_top..tit
+{.line-height:60
+px;.}');....docu
+ment.write('...l
+ayer_pop..pop_to
+p..btn_close{.cu
+rsor:pointer;.wi
+dth:17px;.height
+:17px;.backgroun
+d:url(http://www
+.kpu.ac.kr/front
+/images/btn_clos
+e.png).no-repeat
+;.position:absol
+ute;.top:22px;.r
+ight:20px;.}');.
+...document.writ
+e('...layer_pop.
+.pop_center{.pad
+ding:30px.20px;.
+box-sizing:borde
+r-box;.}');....d
+ocument.write('.
+..layer_pop..pop
+_bottom{.width:1
+00%;.position:ab
+solute;.bottom:0
+px;.left:0px;.bo
+rder-top:1px.sol
+id.#E5E5E5;.heig
+ht:39px;.padding
+:0.20px;.box-siz
+ing:border-box;.
+}');....document
+.write('...layer
+_pop..pop_bottom
+.>..chk_box_W{.}
+');....document.
+write('...layer_
+pop..pop_bottom.
+>..chk_box_W.>.*
+{.line-height:39
+px;.vertical-ali
+gn:middle;.}');.
+...document.writ
+e('...layer_pop.
+.pop_bottom.>..c
+hk_box_W.>.label
+{.color:#999;.fo
+nt-size:12px;.}'
+);....document.w
+rite('...layer_p
+op..pop_bottom.>
+..btn_close{.cur
+sor:pointer;.bor
+der-left:1px.sol
+id.#E5E5E5;.text
+-align:center;.f
+ont-weight:bold;
+.background:#F3F
+3F3;.width:65px;
+.color:#666;.fon
+t-size:12px;.lin
+e-height:38px;.p
+osition:absolute
+;.top:0px;.right
+:0px;.}');....do
+cument.write('.<
+/style>');....do
+cument.write('.<
+div.id="layer117
+2".class="layer_
+pop".style="posi
+tio

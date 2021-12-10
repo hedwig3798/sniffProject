@@ -1,0 +1,26 @@
+
+======== Ethernet Header ========
+S_address 08 00 27 C2 A0 C4
+D_address 52 54 00 12 35 02
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 89
+ -ID: 61101
+ -ttl: 64
+ -protocol: 17
+ -checksum: 44137
+ -S_IP: 10.0.2.15
+ -D_IP: 61.41.153.2
+
+======== UDP Header ========
+ -s_port: 33061
+ -d_port: 53
+ -UDP len: 17664 -checksum: 37090
+======== Data ========
+............prod
+.ingestion-edge.
+prod.dataops.moz
+gcp.net.....

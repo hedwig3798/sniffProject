@@ -1,0 +1,67 @@
+
+======== Ethernet Header ========
+S_address 08 00 27 C2 A0 C4
+D_address 52 54 00 12 35 02
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 754
+ -ID: 28300
+ -ttl: 64
+ -protocol: 6
+ -checksum: 55994
+ -S_IP: 10.0.2.15
+ -D_IP: 210.93.48.51
+
+======== TCP Header ========
+ -s_port: 48110
+ -d_port: 80
+ -seq number: -870502434 -ack number: -1179023256
+======== Data ========
+ET./front/images
+/index_xnb_expan
+d.png.HTTP/1.1..
+Host:.www.kpu.ac
+.kr..User-Agent:
+.Mozilla/5.0.(X1
+1;.Ubuntu;.Linux
+.x86_64;.rv:94.0
+).Gecko/20100101
+.Firefox/94.0..A
+ccept:.image/avi
+f,image/webp,*/*
+..Accept-Languag
+e:.en-US,en;q=0.
+5..Accept-Encodi
+ng:.gzip,.deflat
+e..Connection:.k
+eep-alive..Refer
+er:.http://www.k
+pu.ac.kr/front/s
+tyles/default.cs
+s..Cookie:._ga=G
+A1.3.1315522329.
+1639115326;._gid
+=GA1.3.584639676
+.1639115326;.WT_
+USER_ID=AJeKRkmW
+2INAiyxojgbx5vJd
+WRMExmJ9YNhWe9yY
+Djm7puQFpejKKSJ8
+nSYAt8Cp;.JSESSI
+ONID=sDxacL0YLn0
+7im8RyqIzv3XrIHA
+KLjk7IXFBlXiPxqs
+cHXJZpLH2hjRlPMA
+6s3N3;.logNonM=y
+es;.visitUrlGubu
+n=kpu_1|..If-Mod
+ified-Since:.Mon
+,.05.Jan.2015.08
+:06:27.GMT..If-N
+one-Match:."0-ba
+b-54aa4603"..Cac
+he-Control:.max-
+age=0....

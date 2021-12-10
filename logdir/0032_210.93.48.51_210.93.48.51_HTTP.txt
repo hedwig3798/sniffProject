@@ -1,0 +1,114 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 1500
+ -ID: 3373
+ -ttl: 64
+ -protocol: 6
+ -checksum: 20569
+ -S_IP: 210.93.48.51
+ -D_IP: 10.0.2.15
+
+======== TCP Header ========
+ -s_port: 80
+ -d_port: 48104
+ -seq number: 620461672 -ack number: 1706492251
+======== Data ========
+2e77............
+................
+................
+................
+.......<.--.1510
+26..............
+...........-->..
+<.--.160519.....
+...............s
+so..............
+...,...........-
+->..........<.DO
+CTYPE.HTML>..<ht
+ml.lang="ko">..<
+head>..<meta.cha
+rset="euc-kr">..
+<meta.http-equiv
+="X-UA-Compatibl
+e".content="IE=e
+dge,.chrome=1">.
+.<meta.name="for
+mat-detection".c
+ontent="telephon
+e=no">..<meta.na
+me="viewport".co
+ntent="width=100
+0">..<link.id="f
+avicon".href="/i
+mages/favicon-32
+.ico".rel="short
+cut.icon">..<tit
+le>.............
+.....(2022...3..
+...............)
+</title>..<.--[i
+f..(IE.8)]><.-->
+<link.rel="style
+sheet".type="tex
+t/css".href="/fr
+ont/styles/font.
+css"><.--<.[endi
+f]-->..<link.med
+ia="all".rel="st
+ylesheet".type="
+text/css".href="
+/front/addons/fo
+nt-awesome/css/f
+ont-awesome.css"
+>..<link.media="
+all".rel="styles
+heet".type="text
+/css".href="/fro
+nt/plugins/jquer
+y-ui.min.css">..
+<link.media="all
+".rel="styleshee
+t".type="text/cs
+s".href="/front/
+plugins/jquery-u
+i.theme.css">..<
+link.media="all"
+.rel="stylesheet
+".type="text/css
+".href="/front/s
+tyles/common.css
+">..<link.media=
+"all".rel="style
+sheet".type="tex
+t/css".href="/fr
+ont/styles/defau
+lt.css">..<link.
+media="all".rel=
+"stylesheet".typ
+e="text/css".hre
+f="/front/styles
+/device.css">..<
+.--[if.IE.8]><li
+nk.media="all".r
+el="stylesheet".
+type="text/css".
+href="/front/sty
+les/conditional/
+ie8.css"><.[endi
+f]-->..<.--[if.I
+E.9]><link.media
+="all".rel="styl
+esheet".type="te
+xt/css".href="/f
+ront/styles/cond
+itional/ie9.css"
+><.[endif]-->..<
+scr

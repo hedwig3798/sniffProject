@@ -1,0 +1,64 @@
+
+======== Ethernet Header ========
+S_address 08 00 27 C2 A0 C4
+D_address 52 54 00 12 35 02
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 707
+ -ID: 28276
+ -ttl: 64
+ -protocol: 6
+ -checksum: 8635
+ -S_IP: 10.0.2.15
+ -D_IP: 210.93.48.51
+
+======== TCP Header ========
+ -s_port: 48110
+ -d_port: 80
+ -seq number: 1141911518 -ack number: 264603496
+======== Data ========
+ET./agent_200804
+23.js.HTTP/1.1..
+Host:.www.kpu.ac
+.kr..User-Agent:
+.Mozilla/5.0.(X1
+1;.Ubuntu;.Linux
+.x86_64;.rv:94.0
+).Gecko/20100101
+.Firefox/94.0..A
+ccept:.*/*..Acce
+pt-Language:.en-
+US,en;q=0.5..Acc
+ept-Encoding:.gz
+ip,.deflate..Con
+nection:.keep-al
+ive..Referer:.ht
+tp://www.kpu.ac.
+kr/index.do?sso=
+ok..Cookie:._ga=
+GA1.3.1315522329
+.1639115326;._gi
+d=GA1.3.58463967
+6.1639115326;.WT
+_USER_ID=AJeKRkm
+W2INAiyxojgbx5vJ
+dWRMExmJ9YNhWe9y
+YDjm7puQFpejKKSJ
+8nSYAt8Cp;.JSESS
+IONID=sDxacL0YLn
+07im8RyqIzv3XrIH
+AKLjk7IXFBlXiPxq
+scHXJZpLH2hjRlPM
+A6s3N3;.logNonM=
+yes;.visitUrlGub
+un=kpu_1|..If-Mo
+dified-Since:.We
+d,.14.Jul.2021.0
+4:41:44.GMT..If-
+None-Match:."0-7
+33-60ee6b08"..Ca
+che-Control:.max
+-age=0....

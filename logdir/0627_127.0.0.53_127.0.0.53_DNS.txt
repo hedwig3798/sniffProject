@@ -1,0 +1,30 @@
+
+======== Ethernet Header ========
+S_address 00 00 00 00 00 00
+D_address 00 00 00 00 00 00
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 141
+ -ID: 56567
+ -ttl: 64
+ -protocol: 17
+ -checksum: 12895
+ -S_IP: 127.0.0.53
+ -D_IP: 127.0.0.1
+
+======== UDP Header ========
+ -s_port: 53
+ -d_port: 35590
+ -UDP len: 30976 -checksum: 49406
+======== Data ========
+\...........www.
+google-analytics
+.com............
+..)...www-google
+-analytics.l.goo
+gle...6.........
+.......)........
+

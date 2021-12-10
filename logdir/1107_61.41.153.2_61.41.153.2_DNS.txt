@@ -1,0 +1,29 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 133
+ -ID: 4435
+ -ttl: 64
+ -protocol: 17
+ -checksum: 56198
+ -S_IP: 61.41.153.2
+ -D_IP: 10.0.2.15
+
+======== UDP Header ========
+ -s_port: 53
+ -d_port: 53052
+ -UDP len: 28928 -checksum: 28880
+======== Data ========
+............www.
+dhnews.co.kr....
+..........,...sl
+b-6425505.ncloud
+slb.com.........
+.<..sU.R........
+.<..sU..

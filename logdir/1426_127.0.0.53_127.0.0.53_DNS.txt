@@ -1,0 +1,26 @@
+
+======== Ethernet Header ========
+S_address 00 00 00 00 00 00
+D_address 00 00 00 00 00 00
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 91
+ -ID: 56822
+ -ttl: 64
+ -protocol: 17
+ -checksum: 25950
+ -S_IP: 127.0.0.53
+ -D_IP: 127.0.0.1
+
+======== UDP Header ========
+ -s_port: 53
+ -d_port: 40779
+ -UDP len: 18176 -checksum: 36606
+======== Data ========
+g...........life
+long.kpu.ac.kr..
+................
+]0...)........

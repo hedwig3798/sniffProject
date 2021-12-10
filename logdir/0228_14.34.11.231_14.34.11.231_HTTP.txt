@@ -1,0 +1,54 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 552
+ -ID: 3473
+ -ttl: 64
+ -protocol: 6
+ -checksum: 10309
+ -S_IP: 14.34.11.231
+ -D_IP: 10.0.2.15
+
+======== TCP Header ========
+ -s_port: 80
+ -d_port: 46908
+ -seq number: 45255272 -ack number: 1704016711
+======== Data ========
+TTP/1.1.200.OK..
+Date:.Fri,.10.De
+c.2021.09:26:55.
+GMT..Server:.Apa
+che/2.4.18.(Unix
+).OpenSSL/1.0.1e
+-fips..Expires:.
+Wed,.11.Jan.1984
+.05:00:00.GMT..P
+ragma:.no-cache.
+.Cache-control:.
+max-age=0,.no-ca
+che,.no-store,.m
+ust-revalidate..
+P3P:.CP="NOI.DSP
+.CURa.ADMa.DEVa.
+TAIa.OUR.BUS.IND
+.UNI.COM.NAV.INT
+"..Access-Contro
+l-Allow-Origin:.
+*..MEZZO_ENGINE_
+VERSION:.2..Cont
+ent-Length:.0..S
+et-Cookie:.M_SID
+=8cbfdeb6-fb25-4
+044-adc9-4983492
+a8d92;.path=/;.e
+xpires=Thursday,
+.05-Sep-24.18:26
+:55.GMT;.domain=
+mman.kr;..Connec
+tion:.close....

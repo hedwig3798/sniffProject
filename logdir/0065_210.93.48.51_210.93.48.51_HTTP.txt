@@ -1,0 +1,205 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 2960
+ -ID: 3417
+ -ttl: 64
+ -protocol: 6
+ -checksum: 28755
+ -S_IP: 210.93.48.51
+ -D_IP: 10.0.2.15
+
+======== TCP Header ========
+ -s_port: 80
+ -d_port: 48104
+ -seq number: 351698792 -ack number: 1706492251
+======== Data ========
+ller('','99');">
+..............</
+a></li>.........
+.......<li><a.hr
+ef="https://atte
+nd.kpu.ac.kr".ta
+rget="_blank">..
+......</a></li>.
+...............<
+.--<li><a.href="
+http://ibook.kpu
+.ac.kr/Viewer/W6
+VB4PSACHF1".targ
+et="_blank">....
+..............</
+a></li>-->......
+..........<li><a
+.href="https://c
+oop.kpu.ac.kr/ss
+o/index.jsp".tar
+get="_blank">...
+.....</a></li>..
+..............<l
+i><a.href="http:
+//www.kpu.ac.kr/
+contents/infosys
+/cor/software.ht
+ml".target="_bla
+nk">IT......</a>
+</li>...........
+....</ul>.......
+.......</div>...
+..........</div>
+.............<di
+v.class="tab.q3"
+.id="tabq3".styl
+e="display:none;
+">..............
+<div.class="menu
+">..............
+.<ul>...........
+.....<li><a.href
+="https://sanhak
+.kpu.ac.kr/login
+/login.hs".targe
+t="_blank">.....
+.....</a></li>..
+..............<l
+i><a.href="http:
+//linc.kpu.ac.kr
+/login/login.hs"
+.target="_blank"
+>LINC+......</a>
+</li>...........
+.....<.--<li><a.
+href="http://fam
+ily.kpu.ac.kr/re
+quest/request02.
+jsp".target="_bl
+ank">...........
+.</a></li>-->...
+.............<li
+><a.href="http:/
+/family.kpu.ac.k
+r/login/login.hs
+".target="_blank
+">..............
+..</a></li>.....
+...........<li><
+a.href="http://c
+ec.kpu.ac.kr/".t
+arget="_blank">.
+...............<
+/a></li>........
+........<.--<li>
+<a.href="http://
+www.kpubic.or.kr
+/".target="_blan
+k">............<
+/a></li>-->.....
+...........<li><
+a.href="http://s
+tartup.kpu.ac.kr
+/".target="_blan
+k">............<
+/a></li>........
+........<li><a.h
+ref="http://bk21
+.kpu.ac.kr/login
+/login.hs".targe
+t="_blank">BK21+
+</a></li>.......
+.........<.--<li
+><a.href="http:/
+/sanhak.kpu.ac.k
+r/smbasanhak/ind
+ex.jsp".target="
+_blank">........
+<br./>..........
+..</a></li>-->..
+..............<l
+i><a.href="http:
+//210.93.48.121/
+2020/login/login
+Form.do?comcode=
+0000000002".targ
+et="_blank">....
+..........<br./>
+(............)</
+a></li>.........
+.......<.--http:
+//210.93.48.65/2
+015/login/loginF
+orm.do?comcode=0
+000000002-->....
+............<.--
+<li><a.href="htt
+p://ibook.kpu.ac
+.kr/Viewer/W6VB4
+PSACHF1".target=
+"_blank">.......
+...........</a><
+/li>-->.........
+.......<li><a.hr
+ef="https://coop
+.kpu.ac.kr/sso/i
+ndex.jsp".target
+="_blank">......
+..</a></li>.....
+...........<li><
+a.href="http://w
+ww.kpu.ac.kr/con
+tents/infosys/co
+r/software.html"
+.target="_blank"
+>IT......</a></l
+i>..............
+..<li><a.href="h
+ttp://expo.kpu.a
+c.kr/".target="_
+blank">.........
+...........</a><
+/li>............
+...</ul>........
+......</div>....
+.........</div>.
+............<div
+.class="tab.q4".
+id="tabq4".style
+="display:none;"
+>..............<
+div.class="menu"
+>...............
+<ul>............
+....<li><a.href=
+"https://parents
+.kpu.ac.kr".targ
+et="_blank"><str
+ong>..........</
+strong></a></li>
+................
+<li><a.href="htt
+p://iphak.kpu.ac
+.kr/".target="_b
+lank">..........
+......</a></li>.
+...............<
+.--<li><a.href="
+/contents/main/c
+or/campustour.ht
+ml".target="_bla
+nk">..........</
+a></li>-->......
+..........<li><a
+.href="/kpu/inde
+x.html".target="
+_blank">......VR
+</a></li>.......
+.........<li><a.
+href="/contents/
+main/cor/route.h
+tml".target="_bl
+ank">..

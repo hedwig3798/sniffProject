@@ -1,0 +1,63 @@
+
+======== Ethernet Header ========
+S_address 08 00 27 C2 A0 C4
+D_address 52 54 00 12 35 02
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 686
+ -ID: 52071
+ -ttl: 64
+ -protocol: 6
+ -checksum: 17246
+ -S_IP: 10.0.2.15
+ -D_IP: 210.93.48.51
+
+======== TCP Header ========
+ -s_port: 48114
+ -d_port: 80
+ -seq number: 762801061 -ack number: -1195340696
+======== Data ========
+ET./ImageFileVie
+w?imgPath=banner
+&imgName=157_1.j
+pg&imgGubun=F.HT
+TP/1.1..Host:.ww
+w.kpu.ac.kr..Use
+r-Agent:.Mozilla
+/5.0.(X11;.Ubunt
+u;.Linux.x86_64;
+.rv:94.0).Gecko/
+20100101.Firefox
+/94.0..Accept:.i
+mage/avif,image/
+webp,*/*..Accept
+-Language:.en-US
+,en;q=0.5..Accep
+t-Encoding:.gzip
+,.deflate..Conne
+ction:.keep-aliv
+e..Referer:.http
+://www.kpu.ac.kr
+/index.do?sso=ok
+..Cookie:._ga=GA
+1.3.1315522329.1
+639115326;._gid=
+GA1.3.584639676.
+1639115326;.WT_U
+SER_ID=AJeKRkmW2
+INAiyxojgbx5vJdW
+RMExmJ9YNhWe9yYD
+jm7puQFpejKKSJ8n
+SYAt8Cp;.JSESSIO
+NID=sDxacL0YLn07
+im8RyqIzv3XrIHAK
+Ljk7IXFBlXiPxqsc
+HXJZpLH2hjRlPMA6
+s3N3;.logNonM=ye
+s;.visitUrlGubun
+=kpu_1|..Cache-C
+ontrol:.max-age=
+0....

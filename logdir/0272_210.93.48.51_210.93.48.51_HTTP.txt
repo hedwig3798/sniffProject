@@ -1,0 +1,205 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 2960
+ -ID: 3507
+ -ttl: 64
+ -protocol: 6
+ -checksum: 5715
+ -S_IP: 210.93.48.51
+ -D_IP: 10.0.2.15
+
+======== TCP Header ========
+ -s_port: 80
+ -d_port: 48114
+ -seq number: -2041345432 -ack number: 2119592869
+======== Data ========
+document.write('
+.function.setCoo
+kie(name,.value,
+.expiredays){');
+....document.wri
+te('..var.todayD
+ate.=.new.Date()
+;');....document
+.write('..todayD
+ate.setDate(toda
+yDate.getDate().
++.expiredays);')
+;....document.wr
+ite('..todayDate
+.setYear(todayDa
+te.getFullYear()
+);');....documen
+t.write('..today
+Date.setMonth(to
+dayDate.getMonth
+());');....docum
+ent.write('..tod
+ayDate.setDate(t
+odayDate.getDate
+());');....docum
+ent.write('..tod
+ayDate.setHours(
+0);');....docume
+nt.write('..toda
+yDate.setMinutes
+(0);');....docum
+ent.write('..tod
+ayDate.setSecond
+s(0);');....docu
+ment.write('..do
+cument.cookie.=.
+name.+."=".+.esc
+ape(.value.).+."
+;.path=/;.expire
+s=".+.todayDate.
+toGMTString().+.
+";";');....docum
+ent.write('.}');
+....document.wri
+te('..</script>'
+);....document.w
+rite('..<div.cla
+ss="pop_top".sty
+le="background:#
+1C6DC7;">');....
+document.write('
+...<div.class="t
+it".style="color
+:white;.font-siz
+e:17px;">2021...
+....6PAC........
+............(5.1
+2.)</div>');....
+document.write('
+...<div.class="b
+tn_close".onclic
+k="close1171();"
+></div>');....do
+cument.write('..
+</div>');....doc
+ument.write('..<
+div.class="pop_c
+enter">');....do
+cument.write('..
+...<div.class="c
+ont">.<div.style
+="text-align:.ce
+nter;.line-heigh
+t:.1.5;.font-siz
+e:.13.33px;">..<
+div.class="cont"
+.style="color:.r
+gb(85,.85,.85);.
+font-size:.16px;
+">...<div.style=
+"text-align:.cen
+ter;.line-height
+:.1.5;">....<b><
+span.style="font
+-size:.18pt;">20
+21.......6PAC...
+................
+.(5.12.)</span><
+/b></div>...<div
+.style="text-ali
+gn:.left;.line-h
+eight:.1.5;"><st
+rong><br></stron
+g></div><div.sty
+le="text-align:.
+left;.line-heigh
+t:.1.5;"><strong
+>-..........&nbs
+p;:..........1.4
+................
+......</strong><
+/div><div.style=
+"text-align:.lef
+t;.line-height:.
+1.5;"><strong>-.
+.........&nbsp;:
+.KPU.6..........
+...........(10..
+..........)</str
+ong><strong><br>
+</strong></div><
+div.style="text-
+align:.left;.lin
+e-height:.1.5;">
+<strong>-.......
+...&nbsp;:......
+................
+.....</strong><s
+trong><br></stro
+ng></div><div.st
+yle="text-align:
+.left;.line-heig
+ht:.1.5;">&nbsp;
+.&nbsp;.&nbsp;.&
+nbsp;.&nbsp;.&nb
+sp;.&nbsp;.&nbsp
+;...............
+....&gt;........
+..&gt;..........
+&gt;.........</d
+iv><div.style="t
+ext-align:.left;
+.line-height:.1.
+5;"><strong>-...
+.......:........
+.....230........
+...............<
+/strong></div><d
+iv.style="text-a
+lign:.left;.line
+-height:.1.5;">&
+nbsp;.&nbsp;.&nb
+sp;.&nbsp;.&nbsp
+;.&nbsp;.&nbsp;.
+&nbsp;.(........
+...........,....
+................
+,..............)
+</div><div.style
+="text-align:.ce
+nter;.line-heigh
+t:.1.5;"><br></d
+iv><div.style="t
+ext-align:.cente
+r;.line-height:.
+1.5;"><a.href="/
+gopage/main/gono
+tice.jsp?siteGub
+un=1&amp;bbsConf
+igFK=1&amp;pkid=
+91388&amp;menuGu
+bun=1".target="_
+blank".style="ba
+ckground:.rgb(28
+,.109,.199);.pad
+ding:.0px.10px;.
+border-radius:.1
+0px;.border:.2px
+.solid.rgb(204,.
+204,.204);.color
+:.white;.line-he
+ight:.30px;.disp
+lay:.inline-bloc
+k;.cursor:.point
+er;">...........
+......</a></div>
+..</div>.</div><
+/div><p><br></p>
+.');....document
+.write('..</div>
+');....document.
+write('..<div.cl
+ass="po

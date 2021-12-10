@@ -1,0 +1,24 @@
+
+======== Ethernet Header ========
+S_address 08 00 27 C2 A0 C4
+D_address 52 54 00 12 35 02
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 60
+ -ID: 61428
+ -ttl: 64
+ -protocol: 17
+ -checksum: 33384
+ -S_IP: 10.0.2.15
+ -D_IP: 61.41.153.2
+
+======== UDP Header ========
+ -s_port: 38876
+ -d_port: 53
+ -UDP len: 10240 -checksum: 29666
+======== Data ========
+y...........klec
+.kpu.ac.kr.....

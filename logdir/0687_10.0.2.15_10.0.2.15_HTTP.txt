@@ -1,0 +1,68 @@
+
+======== Ethernet Header ========
+S_address 08 00 27 C2 A0 C4
+D_address 52 54 00 12 35 02
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 764
+ -ID: 52065
+ -ttl: 64
+ -protocol: 6
+ -checksum: 64349
+ -S_IP: 10.0.2.15
+ -D_IP: 210.93.48.51
+
+======== TCP Header ========
+ -s_port: 48114
+ -d_port: 80
+ -seq number: -261395547 -ack number: -1564570520
+======== Data ========
+ET./front/images
+/common/square_2
+x2_000000_50.png
+.HTTP/1.1..Host:
+.www.kpu.ac.kr..
+User-Agent:.Mozi
+lla/5.0.(X11;.Ub
+untu;.Linux.x86_
+64;.rv:94.0).Gec
+ko/20100101.Fire
+fox/94.0..Accept
+:.image/avif,ima
+ge/webp,*/*..Acc
+ept-Language:.en
+-US,en;q=0.5..Ac
+cept-Encoding:.g
+zip,.deflate..Co
+nnection:.keep-a
+live..Referer:.h
+ttp://www.kpu.ac
+.kr/front/styles
+/default.css..Co
+okie:._ga=GA1.3.
+1315522329.16391
+15326;._gid=GA1.
+3.584639676.1639
+115326;.WT_USER_
+ID=AJeKRkmW2INAi
+yxojgbx5vJdWRMEx
+mJ9YNhWe9yYDjm7p
+uQFpejKKSJ8nSYAt
+8Cp;.JSESSIONID=
+sDxacL0YLn07im8R
+yqIzv3XrIHAKLjk7
+IXFBlXiPxqscHXJZ
+pLH2hjRlPMA6s3N3
+;.logNonM=yes;.v
+isitUrlGubun=kpu
+_1|..If-Modified
+-Since:.Mon,.05.
+Jan.2015.08:05:5
+9.GMT..If-None-M
+atch:."0-bc-54aa
+45e7"..Cache-Con
+trol:.max-age=0.
+...

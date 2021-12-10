@@ -1,0 +1,114 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 1500
+ -ID: 3503
+ -ttl: 64
+ -protocol: 6
+ -checksum: 52824
+ -S_IP: 210.93.48.51
+ -D_IP: 10.0.2.15
+
+======== TCP Header ========
+ -s_port: 80
+ -d_port: 48114
+ -seq number: -1237546392 -ack number: 2119592869
+======== Data ========
+nt-size:.10pt;.t
+ext-align:.left;
+.line-height:.21
+.3333px;.font-fa
+mily:...........
+;"><b><span.styl
+e="margin:.0px;.
+padding:.0px;.po
+sition:.relative
+;.font-family:.D
+otum,.....,.sans
+-serif;.font-siz
+e:.12pt;">..&nbs
+p;</span><span.s
+tyle="margin:.0p
+x;.padding:.0px;
+.position:.relat
+ive;.color:.rgb(
+0,.89,.255);.fon
+t-family:.Dotum,
+.....,.sans-seri
+f;.font-size:.12
+pt;">...........
+.</span><span.st
+yle="margin:.0px
+;.padding:.0px;.
+position:.relati
+ve;.font-family:
+.Dotum,.....,.sa
+ns-serif;.font-s
+ize:.12pt;">&nbs
+p;2021.08.04.(..
+).....</span></b
+></p><span.style
+="color:.rgb(85,
+.85,.85);.font-s
+ize:.12pt;"><b><
+/b></span><p.cla
+ss="HStyle0".sty
+le="margin-top:.
+0pt;.margin-bott
+om:.0pt;.color:.
+rgb(0,.0,.0);.fo
+nt-size:.10pt;.t
+ext-align:.left;
+.line-height:.21
+.3333px;.font-fa
+mily:...........
+;"></p><div.id="
+hwpEditorBoardCo
+ntent".data-hjso
+nver="1.0".data-
+jsonlen="7425".s
+tyle="color:.rgb
+(85,.85,.85);.fo
+nt-size:.medium;
+.margin:.0px;.pa
+dding:.0px;.text
+-align:.left;"><
+/div><p.style="c
+olor:.rgb(85,.85
+,.85);.font-size
+:.16px;.text-ali
+gn:.left;"></p><
+span.style="colo
+r:.rgb(85,.85,.8
+5);.font-size:.1
+2pt;"><b></b></s
+pan><p.class="HS
+tyle0".style="ma
+rgin-top:.0pt;.m
+argin-bottom:.0p
+t;.color:.rgb(0,
+.0,.0);.font-siz
+e:.10pt;.text-al
+ign:.left;.line-
+height:.21.3333p
+x;.font-family:.
+..........;"><b>
+<span.style="mar
+gin:.0px;.paddin
+g:.0px;.position
+:.relative;.font
+-family:.Dotum,.
+....,.sans-serif
+;.font-size:.12p
+t;">..&nbsp;</sp
+an><span.style="
+margin:.0px;.pad
+ding:.0px;.posit
+ion:.relative;.c
+olo

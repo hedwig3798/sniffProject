@@ -1,0 +1,205 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 2960
+ -ID: 3415
+ -ttl: 64
+ -protocol: 6
+ -checksum: 29267
+ -S_IP: 210.93.48.51
+ -D_IP: 10.0.2.15
+
+======== TCP Header ========
+ -s_port: 80
+ -d_port: 48104
+ -seq number: -1393918104 -ack number: 1706492251
+======== Data ========
+et="_blank">....
+....</a></li>...
+.............<.-
+-.<li><a.href="j
+avascript:goHack
+ers();".target="
+_blank">........
+..........</a></
+li>.-->.........
+.......<.--<li><
+a.href="http://i
+book.kpu.ac.kr/V
+iewer/W6VB4PSACH
+F1".target="_bla
+nk">............
+......</a></li>-
+->..............
+..<li><a.href="h
+ttp://www.kpu.ac
+.kr/contents/inf
+osys/cor/softwar
+e.html".target="
+_blank">IT......
+</a></li>.......
+.........<li><a.
+href="http://exp
+o.kpu.ac.kr/".ta
+rget="_blank".st
+yle="font-size:7
+pt;">...........
+.........</a></l
+i>..............
+.</ul>..........
+....</div>......
+.......</div>...
+..........<div.c
+lass="tab.q2".id
+="tabq2".style="
+display:none;">.
+.............<di
+v.class="menu">.
+..............<u
+l>..............
+..<.--<li><a.hre
+f="http://kms.kp
+u.ac.kr".target=
+"_blank">.......
+.....(KMS)</a></
+li>-->..<.--....
+................
+............<li>
+<a.href="javascr
+ipt:void(0);".on
+click="alert('..
+................
+........');retur
+n.false;">......
+............</a>
+</li>...........
+.......-->......
+..........<.--<l
+i><a.href="http:
+//app.kpu.ac.kr:
+8000/puhaksa".ta
+rget="_blank">..
+............</a>
+</li>-->........
+........<.--<li>
+<a.href="http://
+app.kpu.ac.kr:80
+00/pghaksa".targ
+et="_blank">....
+............</a>
+</li>-->..<li><a
+.href="https://p
+ortal.kpu.ac.kr"
+.target="_blank"
+><strong>.......
+...</strong></a>
+</li>..<.--<li><
+a.href="https://
+portal.kpu.ac.kr
+".target="_blank
+"><strong>......
+........</strong
+></a></li>-->...
+.............<li
+><a.href="#".onc
+lick="goWebminwo
+n();"><strong>..
+............</st
+rong></a></li>..
+..............<l
+i><a.href="http:
+//eclass.kpu.ac.
+kr/ilos/sso/inde
+x.jsp".target="_
+blank">e-Class</
+a></li>.........
+.......<.--<li><
+a.href="http://e
+class.kpu.ac.kr"
+.target="_blank"
+>e-Class</a></li
+>-->............
+....<.--<li><a.h
+ref="http://abee
+k.kpu.ac.kr/logi
+n.jsp".target="_
+blank">.........
+.....</a></li>--
+>...............
+.<li><a.href="ht
+tp://pg.kpu.ac.k
+r".target="_blan
+k">........</a><
+/li>............
+....<.--<li><a.h
+ref="javascript:
+goCredu();">e...
+...</a></li>-->.
+...............<
+li><a.href="http
+://job.kpu.ac.kr
+/sso/index.jsp?s
+soGb=ptfol".targ
+et="_blank">U-CA
+N+.......</a></l
+i>..............
+..<.--<li><a.hre
+f="http://web.kp
+u.ac.kr:8000/int
+ra/loginExeCrypt
+2.jsp".target="_
+blank">.........
+.....</a></li>--
+>...............
+.<.--<li><a.href
+="https://idisk.
+kpu.ac.kr".targe
+t="_blank">.....
+.......</a></li>
+-->.............
+...<li><a.href="
+#".onClick="aler
+t('.............
+................
+...........\n...
+................
+..............20
+21.01.06........
+.........,......
+................
+....031-8041-027
+4...............
+.\n...........\n
+');">...........
+.</a></li>......
+..........<li><a
+.href="http://ws
+l.kpu.ac.kr".tar
+get="_blank">...
+.........</a></l
+i>..............
+..<li><a.href="h
+ttps://portal.kp
+u.ac.kr">.......
+.........</a></l
+i>..............
+..<li><a.href="h
+ttp://210.93.48.
+121/2020/login/l
+oginForm.do".tar
+get="_blank">...
+...........<br./
+>(........)</a><
+/li>..<.--http:/
+/210.93.48.65/20
+16/login/loginFo
+rm.do-->........
+........<li><a.h
+ref="javascript:
+goCopyK

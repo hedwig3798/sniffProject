@@ -1,0 +1,151 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 2098
+ -ID: 3528
+ -ttl: 64
+ -protocol: 6
+ -checksum: 24406
+ -S_IP: 210.93.48.51
+ -D_IP: 10.0.2.15
+
+======== TCP Header ========
+ -s_port: 80
+ -d_port: 48114
+ -seq number: -1765438872 -ack number: 2119592869
+======== Data ========
+ocument.write('.
+...<input.class=
+"".onclick=close
+Win1174().type="
+checkbox".name="
+".value=""/>');.
+...document.writ
+e('....<label>..
+................
+.........</label
+>');....document
+.write('....<inp
+ut.class="".oncl
+ick=close7Win117
+4().type="checkb
+ox".name="".valu
+e=""/>');....doc
+ument.write('...
+.<label>........
+................
+....</label>');.
+...document.writ
+e('...</div>');.
+...document.writ
+e('...<div.class
+="btn_close".onc
+lick="close1174(
+);">....</div>')
+;....document.wr
+ite('..</div>');
+....document.wri
+te('.</div>');..
+..document.write
+('');..}....var.
+chkDate.=.new.Da
+te();...var.year
+Str,.monthStr,.d
+ayStr;....yearSt
+r.=.chkDate.getF
+ullYear();.....m
+onthStr.=.chkDat
+e.getMonth()+1;.
+...dayStr.=.chkD
+ate.getDate();..
+...if.(monthStr<
+10){........mont
+hStr.=.'0'.+.mon
+thStr;.....}....
+.if.(dayStr<10){
+......dayStr.=.'
+0'.+.dayStr;...}
+....tmpStr.=.''.
++.yearStr.+.'-'.
++.monthStr.+.'-'
+.+.dayStr;......
+function.cookieC
+heck(){....if(ge
+tCookie('popName
+1172').='done'){
+.....if.(tmpStr>
+='2021-05-31'.&&
+.tmpStr<='2021-0
+6-25'){.......op
+en_pop1172();...
+.}...}..if(getCo
+okie('popName116
+5').='done'){...
+..if.(tmpStr>='2
+021-02-25'.&&.tm
+pStr<='2021-02-2
+6'){.......open_
+pop1165();....}.
+..}..if(getCooki
+e('popName1173')
+.='done'){.....i
+f.(tmpStr>='2021
+-07-19'.&&.tmpSt
+r<='2021-07-30')
+{.......open_pop
+1173();....}...}
+..if(getCookie('
+popName1171').='
+done'){.....if.(
+tmpStr>='2021-05
+-28'.&&.tmpStr<=
+'2021-06-08'){..
+.....open_pop117
+1();....}...}..i
+f(getCookie('pop
+Name1166').='don
+e'){.....if.(tmp
+Str>='2021-02-26
+'.&&.tmpStr<='20
+21-03-05'){.....
+..open_pop1166()
+;....}...}..if(g
+etCookie('popNam
+e1175').='done')
+{.....if.(tmpStr
+>='2021-10-08'.&
+&.tmpStr<='2021-
+10-14'){.......o
+pen_pop1175();..
+..}...}..if(getC
+ookie('popName11
+77').='done'){..
+...if.(tmpStr>='
+2021-12-06'.&&.t
+mpStr<='2021-12-
+12'){.......open
+_pop1177();....}
+...}..if(getCook
+ie('popName1176'
+).='done'){.....
+if.(tmpStr>='202
+1-11-08'.&&.tmpS
+tr<='2021-11-14'
+){.......open_po
+p1176();....}...
+}..if(getCookie(
+'popName1174').=
+'done'){.....if.
+(tmpStr>='2021-0
+9-30'.&&.tmpStr<
+='2021-10-06'){.
+......open_pop11
+74();....}...}..
+.....}.....cooki
+eCheck();

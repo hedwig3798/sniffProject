@@ -1,0 +1,25 @@
+
+======== Ethernet Header ========
+S_address 00 00 00 00 00 00
+D_address 00 00 00 00 00 00
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 71
+ -ID: 37369
+ -ttl: 64
+ -protocol: 17
+ -checksum: 30378
+ -S_IP: 127.0.0.1
+ -D_IP: 127.0.0.53
+
+======== UDP Header ========
+ -s_port: 56774
+ -d_port: 53
+ -UDP len: 13056 -checksum: 31486
+======== Data ========
+,...........news
+.naver.com......
+.)........

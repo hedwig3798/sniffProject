@@ -1,0 +1,114 @@
+
+======== Ethernet Header ========
+S_address 52 54 00 12 35 02
+D_address 08 00 27 C2 A0 C4
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 1500
+ -ID: 3419
+ -ttl: 64
+ -protocol: 6
+ -checksum: 8793
+ -S_IP: 210.93.48.51
+ -D_IP: 10.0.2.15
+
+======== TCP Header ========
+ -s_port: 80
+ -d_port: 48104
+ -seq number: 2080473192 -ack number: 1706492251
+======== Data ========
+...........</a><
+/li>............
+....<li><a.href=
+"/contents/main/
+cor/phone.html".
+target="_blank">
+..........</a></
+li>.............
+...<.--<li><a.hr
+ef="/contents/ma
+in/cor/fabook.ht
+ml".target="_bla
+nk">............
+......</a></li>-
+->..............
+..<li><a.href="h
+ttp://www.kpu.ac
+.kr/job/index.do
+".target="_blank
+">..............
+......<br>(.....
+.........)</a></
+li>.............
+...<.--<li><a.hr
+ef="http://ibook
+.kpu.ac.kr/Viewe
+r/3H69T0F4GRXH".
+target="_blank">
+................
+..</a></li>-->..
+..............<l
+i><a.href="http:
+//www.kpu.ac.kr/
+contents/infosys
+/cor/software.ht
+ml".target="_bla
+nk">IT......</a>
+</li>...........
+....</ul>.......
+.......</div>...
+..........</div>
+............</di
+v>...........</d
+iv>..........</d
+iv>.........</di
+v>.........<.--/
+/..pane.-->.....
+...</div>.......
+</div>.......<di
+v.class="i22">..
+......<div.class
+="i221">........
+.<div.class="pan
+e.shortcut">....
+......<div.class
+="title">.......
+....<h1>SPOT</h1
+>..........</div
+>..........<div.
+class="contents"
+>...........<.--
+.<div.class="bg"
+><img.src="/fron
+t/images/stockpi
+le/index_221.jpg
+".alt=".........
+."></div>.-->...
+........<.--<div
+.class="bg"><img
+.src="/front/ima
+ges/stockpile/in
+dex_221_3.png".a
+lt="..........">
+</div>-->.......
+....<div.class="
+bg">............
+<img.src="/front
+/images/stockpil
+e/index_221_4.pn
+g".alt="........
+..".id="Image-Ma
+ps-Com-image-map
+s-2019-08-21-015
+213".usemap="#im
+age-maps-2019-08
+-21-015213">....
+........<map.nam
+e="image-maps-20
+19-08-21-015213"
+.id="ImageMapsCo
+m-image-maps-201
+9-0

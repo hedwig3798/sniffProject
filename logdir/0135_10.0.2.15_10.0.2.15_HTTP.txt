@@ -1,0 +1,66 @@
+
+======== Ethernet Header ========
+S_address 08 00 27 C2 A0 C4
+D_address 52 54 00 12 35 02
+
+======== IP Hearder ========
+ -version: 4
+ -ihl: 5 (bytes)
+ -type of service: 0
+ -lenght: 732
+ -ID: 35754
+ -ttl: 64
+ -protocol: 6
+ -checksum: 53917
+ -S_IP: 10.0.2.15
+ -D_IP: 210.93.48.51
+
+======== TCP Header ========
+ -s_port: 48102
+ -d_port: 80
+ -seq number: 1873096727 -ack number: 302087784
+======== Data ========
+ET./front/plugin
+s/jquery.mousewh
+eel-3.1.12.js.HT
+TP/1.1..Host:.ww
+w.kpu.ac.kr..Use
+r-Agent:.Mozilla
+/5.0.(X11;.Ubunt
+u;.Linux.x86_64;
+.rv:94.0).Gecko/
+20100101.Firefox
+/94.0..Accept:.*
+/*..Accept-Langu
+age:.en-US,en;q=
+0.5..Accept-Enco
+ding:.gzip,.defl
+ate..Connection:
+.keep-alive..Ref
+erer:.http://www
+.kpu.ac.kr/index
+.do?sso=ok..Cook
+ie:._ga=GA1.3.13
+15522329.1639115
+326;._gid=GA1.3.
+584639676.163911
+5326;.WT_USER_ID
+=AJeKRkmW2INAiyx
+ojgbx5vJdWRMExmJ
+9YNhWe9yYDjm7puQ
+FpejKKSJ8nSYAt8C
+p;.JSESSIONID=sD
+xacL0YLn07im8Ryq
+Izv3XrIHAKLjk7IX
+FBlXiPxqscHXJZpL
+H2hjRlPMA6s3N3;.
+logNonM=yes;.vis
+itUrlGubun=kpu_1
+|..If-Modified-S
+ince:.Thu,.18.De
+c.2014.08:40:00.
+GMT..If-None-Mat
+ch:."0-204e-5492
+92e0"..Cache-Con
+trol:.max-age=0.
+...
