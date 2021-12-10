@@ -13,17 +13,17 @@
 #include <signal.h>
 #include <time.h>
 #include <pthread.h>
-//디렉토리 생성 라이브러리
+// directory
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <dirent.h>
-//시스템 관련 헤더
+//with system
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <netinet/ip_icmp.h>
-#include "dns.h"
+// #include "dns.h"
 
-#define BUFFER_SIZE 65536
+#define BUF_SIZE 65536
 #define PATH_MAX 512
 
 #define ICMP 1
@@ -31,6 +31,7 @@
 #define UDP 17
 #define DNS 53
 #define HTTP 80
+#define HTTPS 443
 
 typedef struct http_header{
 	unsigned char http_first[3000];
@@ -54,7 +55,7 @@ struct sockaddr_in source, dest;
 struct sigaction act;
 struct http_header *hh;
 
-int packet_handler(void);
+int packet_handler();
 int packet_analyze(char *filter);
 int packet_list();
 
@@ -88,11 +89,11 @@ int associate_file(int ch, int flag){
 
 	if(0 <= ch && ch <= packet_num){
 		tokenizer(file_list[ch]);
-		printf("연관 필터 적용 : %s \n", file_token[1]);
+		printf("associate filter set : %s \n", file_token[1]);
 		strcpy(filter2 ,file_token[1]);
 		}
 	else{
-		printf("입력값 재확인  \n");
+		printf("check your input  \n");
 	}
 }
 
@@ -120,8 +121,8 @@ void file_read(int ch)
 	strcat(dir_path, path);
 
 	read_file = fopen(dir_path,"r");
-	printf("입력 확인 %d \n", ch);
-	printf("실행 파일  %s \n", dir_path);
+	printf("input check %d \n", ch);
+	printf("runnig file %s \n", dir_path);
 
 	if(read_file != NULL)
 	{
@@ -144,12 +145,12 @@ void file_read(int ch)
 
 void packetSelect(){
 	int input = 0;
-	printf("분석할  패킷의 프레임 번호 : ");
+	printf("input frame number : ");
 	scanf(" %d", &input);
 	getchar();
 
 	if(input > packet_num || input < 0){
-		printf("잘못된 입력 \n");
+		printf("worng input\n");
 		return;
 	}
 
@@ -186,11 +187,12 @@ int main(int argc, char *argv[])
 				printf("filter set...\n");
 				break;
 			case 5: 
-				printf("연관 프레임 번호를 입력하세요 : ");
+				printf("input associate frame number: ");
 				scanf(" %d", &input);
 				getchar();
 
 				associate_file(input, 0);
+
 				break;
 			case 6: 
 				strcpy(filter,"");
@@ -269,7 +271,7 @@ int rmdirs(const char *path, int force)
 			if(unlink(filename)==-1&&!force){
 				return -1;
 			}
-			printf("파일삭제 %s \n", file->d_name);
+			printf("remove: %s \n", file->d_name);
 		}
 	}
 
@@ -312,6 +314,7 @@ int packet_handler(){
 	int p_len = 0;
 	unsigned char *data;
 	int rest_data = 0;
+	FILE * log_fp;
 	
 	act.sa_handler = close_handler;
 	sigemptyset(&act.sa_mask);
@@ -324,8 +327,8 @@ int packet_handler(){
 		printf("\nend chahptuer: sock open error\n");
 		return -1;
 	}
-
-	while(is_chap){
+	
+	while(rawsocket < 0){
 
 		memset(buf, 0, BUF_SIZE);
 		i_header_len = 0;
@@ -420,21 +423,21 @@ int packet_handler(){
 			continue;
 		}
 
-		if (num_packet < 10){
-			sprintf(frame, "000%d", num_packet);
+		if (packet_num < 10){
+			sprintf(frame, "000%d", packet_num);
 		}
-		else if (10 <= num_packet && num_packet < 100){
-			sprintf(frame, "00%d", num_packet);
+		else if (10 <= packet_num && packet_num < 100){
+			sprintf(frame, "00%d", packet_num);
 		}
-		else if (100 <= num_packet && num_packet < 1000){
-			sprintf(frame, "0%d", num_packet);
+		else if (100 <= packet_num && packet_num < 1000){
+			sprintf(frame, "0%d", packet_num);
 		}
-		else if (1000 <= num_packet && num_packet < 10000){
-			sprintf(frame, "%d", num_packet);
+		else if (1000 <= packet_num && packet_num < 10000){
+			sprintf(frame, "%d", packet_num);
 		}
-		else if (num_packet >= 10000){
-			is_chap = 0;
+		else if (packet_num >= 10000){
 			printf("packet save buffer id full. end chapture\n");
+			close_handler();
 		}
 
 		sprintf(filename, "./logdir/%s_%s_%s_%s.txt", frame, inet_ntoa(source.sin_addr), inet_ntoa(dest.sin_addr), protocol_name);
@@ -467,7 +470,7 @@ int packet_handler(){
 		printf("Dest %s\t", inet_ntoa(dest.sin_addr));
 		printf("Protocol %s\n", protocol_name);
 		
-		num_packet ++;
+		packet_num ++;
 		
 
 		fclose(log_fp);
@@ -557,13 +560,13 @@ int packet_analyze(char *filters){
 
 	const char *path = "./logdir";
 
-	// NULL 로 변경, 얜 전체 다 매핑 시키는 용도로 쓸 꺼다. 
+	 
 	if((count = scandir(path, &namelist, NULL, alphasort)) == -1){
 		fprintf(stderr, "%s direntory scan error\n", path);
 		return -1;
 	}
 
-	// .이나 ..을 계산에서 제외시키기 위함이다.
+	
 	if(strcmp(filter,"")==0 && strcmp(filter2,"")==0){
 		plus = 2;
 	}
@@ -572,14 +575,12 @@ int packet_analyze(char *filters){
 	}
 
 	for(idx = plus; idx < count; idx++){
-		//파일의 이름 출력
-		//printf("%s\n", namelist[idx]->d_name);
+
 		strcpy(file_list[idx - plus], namelist[idx]->d_name);
 	}
 
-	printf("반환된 count : %d\n", count);
+	printf("changed count : %d\n", count);
 
-	//file_list에 데이터 저장, 디버깅 완료
 
 	for(idx = 0; idx < count; idx++){
 		free(namelist[idx]);
@@ -606,20 +607,17 @@ int list_view(char *filters){
 		return -1;
 	}
 
-	// .이나 ..을 계산에서 제외시키기 위함이다.
+
 	if(strcmp(filter,"")==0 && strcmp(filter2,"")==0){
 		plus = 2;
 	}
 
 
 	for(idx = plus; idx < count; idx++){
-		//파일의 이름 출력
 		printf("%s\n", namelist[idx]->d_name);
 	}
 
 	printf("반환된 count : %d\n", count);
-
-	//file_list에 데이터 저장, 디버깅 완료
 
 	for(idx = 0; idx < count; idx++){
 		free(namelist[idx]);
