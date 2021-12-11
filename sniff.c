@@ -24,7 +24,6 @@
 #include "dns.h" // open source by apple
 
 #define BUF_SIZE 65536
-#define PATH_MAX 512
 
 #define ICMP 1
 #define TCP 6
@@ -32,10 +31,6 @@
 #define DNS 53
 #define HTTP 80
 #define HTTPS 443
-
-typedef struct http_header{
-	unsigned char http_first[3000];
-}http_header;
 
 int rawsocket;
 int packet_num = 0;
@@ -73,7 +68,7 @@ void print_ip_header(struct iphdr * i_header, FILE *fp);
 void print_icmp_header(struct icmp * icmp_header, struct ih_idseq *ih_idseq, FILE * fp);
 void print_tcp_header(struct tcphdr * tcp_header, FILE * fp);
 void print_udp_header(struct udphdr * udp_header, FILE * fp);
-void print_data(unsigned char *data, int rest_data, FILE * fp);
+void print_data(char *data, int rest_data, FILE * fp);
 void print_dns_data(dns_header_t * d_header, dns_question_t * d_question, FILE * fp);
 
 void print_menu();
@@ -318,6 +313,7 @@ int packet_handler(){
 	unsigned char *data;
 	int rest_data = 0;
 	FILE * log_fp;
+	int http_size;
 	
 	char source_ip_str[20];
 	char dest_ip_str[20];
@@ -403,7 +399,7 @@ int packet_handler(){
 		if ((DNS == s_port) || (DNS == d_port)){
 			strcpy(protocol_name, "DNS");
 		}
-		else if ((HTTP == s_port) || (HTTP == d_port)){
+		else if (((HTTP == s_port) || (HTTP == d_port)) && ((80 < buf_len) && (buf_len < 2000))){
 			strcpy(protocol_name, "HTTP");
 		}
 		else if ((HTTPS == s_port) || (HTTPS == d_port)){
@@ -413,8 +409,8 @@ int packet_handler(){
 
 		// if http -> dave http data
 		if (strcmp(protocol_name, "HTTP") == 0){
-			hh = (struct http_header*)(buf + sizeof(struct ethhdr) + i_header_len + sizeof(struct tcphdr));
-			int http_size = rest_data;
+			hh = (char *)(buf + sizeof(struct ethhdr) + i_header_len + sizeof(struct tcphdr));
+			http_size = rest_data;
 		}
 
 		mkdir("./logdir", 0755);
@@ -482,7 +478,7 @@ int packet_handler(){
 
 		if (strcmp(protocol_name, "HTTP") == 0){
 			fprintf(log_fp, "\n======== HTTP ========\n");
-			fprintf(log_fp, "%s\n", hh->http_first);
+			fprintf(log_fp, "%s\n", (char *)hh);
 		}
 		
 		
@@ -490,6 +486,12 @@ int packet_handler(){
 		printf("Dest %s\t", inet_ntoa(dest.sin_addr));
 		printf("Protocol %s\n", protocol_name);
 		
+		// for debug
+		/*
+		fprintf(log_fp, "\n==== raw ====\n");
+		print_data((char*)buf, buf_len, log_fp);
+		*/
+
 		packet_num ++;
 		
 
@@ -540,8 +542,8 @@ void print_tcp_header(struct tcphdr * tcp_header, FILE * fp){
 	fprintf(fp, "\n======== TCP Header ========\n");
 	fprintf(fp, " -s_port: %d\n", ntohs(tcp_header->source));
 	fprintf(fp, " -d_port: %d\n", ntohs(tcp_header->dest));
-	fprintf(fp, " -seq number: %d", tcp_header->seq);
-	fprintf(fp, " -ack number: %d", tcp_header->ack_seq);
+	fprintf(fp, " -seq number: %x\n", tcp_header->seq);
+	fprintf(fp, " -ack number: %x\n", tcp_header->ack_seq);
 }
 
 void print_udp_header(struct udphdr * udp_header, FILE * fp){
@@ -553,7 +555,7 @@ void print_udp_header(struct udphdr * udp_header, FILE * fp){
 	fprintf(fp, " -checksum: %d\n", udp_header->check);
 }
 
-void print_data(unsigned char *data, int rest_data, FILE * fp){
+void print_data(char *data, int rest_data, FILE * fp){
 
 	fprintf(fp, "\n======== Data ========\n");
 	
