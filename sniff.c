@@ -21,7 +21,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <netinet/ip_icmp.h>
-// #include "dns.h"
+#include "dns.h" // open source by apple
 
 #define BUF_SIZE 65536
 #define PATH_MAX 512
@@ -51,7 +51,8 @@ char file_token[4][40];
 char file_list[10000][100];
 
 
-struct sockaddr_in source, dest;
+struct sockaddr_in source;
+struct sockaddr_in dest;
 struct sigaction act;
 struct http_header *hh;
 
@@ -73,6 +74,7 @@ void print_icmp_header(struct icmp * icmp_header, struct ih_idseq *ih_idseq, FIL
 void print_tcp_header(struct tcphdr * tcp_header, FILE * fp);
 void print_udp_header(struct udphdr * udp_header, FILE * fp);
 void print_data(unsigned char *data, int rest_data, FILE * fp);
+void print_dns_data(dns_header_t * d_header, dns_question_t * d_question, FILE * fp);
 
 void print_menu();
 void tokenizer(char str[1024]);
@@ -167,6 +169,7 @@ int main(int argc, char *argv[])
 		print_menu();
 		printf("\ninput : ");
 		scanf("%d", &input);
+		getchar();
 		int count = 0;
 	
 		switch(input){
@@ -316,6 +319,9 @@ int packet_handler(){
 	int rest_data = 0;
 	FILE * log_fp;
 	
+	char source_ip_str[20];
+	char dest_ip_str[20];
+
 	act.sa_handler = close_handler;
 	sigemptyset(&act.sa_mask);
 	act.sa_flags = 0;
@@ -328,7 +334,7 @@ int packet_handler(){
 		return -1;
 	}
 	
-	while(rawsocket < 0){
+	while(rawsocket > 0){
 
 		memset(buf, 0, BUF_SIZE);
 		i_header_len = 0;
@@ -345,7 +351,6 @@ int packet_handler(){
 			return -1;
 		}
 		buf[buf_len] = 0;
-		
 		// link header remove
 		struct ethhdr *e_header = (struct ethhdr *)(buf);
 		// ip header remove
@@ -355,11 +360,16 @@ int packet_handler(){
 		memset(&dest, 0, sizeof(dest));
 		source.sin_addr.s_addr = i_header->saddr;
 		dest.sin_addr.s_addr = i_header->daddr;
+
+		strcpy(source_ip_str, inet_ntoa(source.sin_addr));
+		strcpy(dest_ip_str, inet_ntoa(dest.sin_addr));
+
 		protocol = (unsigned int)i_header->protocol;
 		data = (buf + i_header_len + sizeof(struct ethhdr));
 		rest_data = buf_len - (i_header_len + sizeof(struct ethhdr));
 		
-		
+
+
 		if (protocol == ICMP){
 			struct icmp *icmp = (struct icmp*)(buf + sizeof(struct ethhdr) + i_header_len);
 			struct ih_idseq *ih_idseq = (struct ih_idseq*)(buf + i_header_len + sizeof(struct ethhdr) + sizeof(struct ih_idseq));
@@ -388,7 +398,7 @@ int packet_handler(){
 		else{
 			sprintf(protocol_name, "%d", protocol);
 		}
-	
+
 		// analize HTTP, DNS. HTTPS by port
 		if ((DNS == s_port) || (DNS == d_port)){
 			strcpy(protocol_name, "DNS");
@@ -400,11 +410,10 @@ int packet_handler(){
 			strcpy(protocol_name, "http-tls");
 		}
 		
-		
 
 		// if http -> dave http data
 		if (strcmp(protocol_name, "HTTP") == 0){
-			struct http_header* http_header = (struct http_header*)(buf + sizeof(struct ethhdr) + i_header_len + sizeof(struct tcphdr));
+			hh = (struct http_header*)(buf + sizeof(struct ethhdr) + i_header_len + sizeof(struct tcphdr));
 			int http_size = rest_data;
 		}
 
@@ -423,6 +432,7 @@ int packet_handler(){
 			continue;
 		}
 
+
 		if (packet_num < 10){
 			sprintf(frame, "000%d", packet_num);
 		}
@@ -440,7 +450,7 @@ int packet_handler(){
 			close_handler();
 		}
 
-		sprintf(filename, "./logdir/%s_%s_%s_%s.txt", frame, inet_ntoa(source.sin_addr), inet_ntoa(dest.sin_addr), protocol_name);
+		sprintf(filename, "./logdir/%s_%s_%s_%s", frame, source_ip_str, dest_ip_str, protocol_name);
 		log_fp = fopen(filename, "w");
 		print_ethernet_header(e_header, log_fp);
 		print_ip_header(i_header, log_fp);
@@ -463,7 +473,17 @@ int packet_handler(){
 			print_udp_header(u_header, log_fp);
 		}
 
-		print_data(data, rest_data, log_fp);
+		if (strcmp(protocol_name, "DNS") == 0){
+			dns_header_t* d_header = (dns_header_t *)(buf + sizeof(struct ethhdr) + i_header_len + sizeof(struct udphdr));
+			dns_question_t* d_question = (dns_question_t *)(buf + sizeof(struct ethhdr) + i_header_len + sizeof(struct udphdr) + sizeof(dns_header_t));
+
+			print_dns_data(d_header, d_question, log_fp);
+		}
+
+		if (strcmp(protocol_name, "HTTP") == 0){
+			fprintf(log_fp, "\n======== HTTP ========\n");
+			fprintf(log_fp, "%s\n", hh->http_first);
+		}
 		
 		
 		printf("Source %s\t", inet_ntoa(source.sin_addr));
@@ -529,8 +549,8 @@ void print_udp_header(struct udphdr * udp_header, FILE * fp){
 	fprintf(fp, "\n======== UDP Header ========\n");
 	fprintf(fp, " -s_port: %d\n", ntohs(udp_header->source));
 	fprintf(fp, " -d_port: %d\n", ntohs(udp_header->dest));
-	fprintf(fp, " -UDP len: %d", udp_header->len);
-	fprintf(fp, " -checksum: %d", udp_header->check);
+	fprintf(fp, " -UDP len: %d\n", udp_header->len);
+	fprintf(fp, " -checksum: %d\n", udp_header->check);
 }
 
 void print_data(unsigned char *data, int rest_data, FILE * fp){
@@ -551,6 +571,32 @@ void print_data(unsigned char *data, int rest_data, FILE * fp){
 
 	fprintf(fp, "\n");
 }
+
+void print_dns_data(dns_header_t * d_header, dns_question_t * d_question, FILE * fp){
+	char * data;
+	int index = 0;
+	fprintf(fp, "\n======== DNS data ========\n");
+	fprintf(fp, " -DNS id: 0x%x\n", d_header->xid);
+	fprintf(fp, " -DNS Flags: %d\n", d_header->flags);
+
+	fprintf(fp, " -questions: %d\n", d_header-> qdcount);
+	fprintf(fp, " -answer RRs: %d\n", d_header-> ancount);
+	fprintf(fp, " -auth RRs: %d\n", d_header-> nscount);
+	fprintf(fp, " -additional RRs: %d\n", d_header-> arcount);
+
+	fprintf(fp, " -question name: ");
+	
+	data = (char*)d_question;
+
+	while (1){
+		if (data[index] == 0x00){
+			break;
+		}
+		fprintf(fp, "%c", data[index]);
+		index ++;
+	}
+}
+
 
 int packet_analyze(char *filters){
 	struct dirent **namelist;
@@ -617,7 +663,7 @@ int list_view(char *filters){
 		printf("%s\n", namelist[idx]->d_name);
 	}
 
-	printf("반환된 count : %d\n", count);
+	printf("packet count : %d\n", count);
 
 	for(idx = 0; idx < count; idx++){
 		free(namelist[idx]);
