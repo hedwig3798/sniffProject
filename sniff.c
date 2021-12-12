@@ -369,7 +369,7 @@ int packet_handler(){
 		if (protocol == ICMP){
 			struct icmp *icmp = (struct icmp*)(buf + sizeof(struct ethhdr) + i_header_len);
 			struct ih_idseq *ih_idseq = (struct ih_idseq*)(buf + i_header_len + sizeof(struct ethhdr) + sizeof(struct ih_idseq));
-			strcpy(protocol_name, "ICPM");
+			strcpy(protocol_name, "ICMP");
 			s_port = ntohs(i_header->saddr);
 			d_port = ntohs(i_header->daddr);
 			data = (buf + i_header_len + sizeof(struct ethhdr) + sizeof(struct icmp));
@@ -575,28 +575,94 @@ void print_data(char *data, int rest_data, FILE * fp){
 }
 
 void print_dns_data(dns_header_t * d_header, dns_question_t * d_question, FILE * fp){
-	char * data;
+	unsigned char * data;
+	
 	int index = 0;
+
+	struct flag{
+		unsigned char QR : 1;
+		unsigned int opcode : 4;
+		unsigned char AA : 1;
+		unsigned char TC : 1;
+		unsigned char RD : 1;
+		unsigned char RA : 1;
+		unsigned int zero : 3;
+		unsigned int recod : 4;
+	};
+
+	struct answer{
+		uint16_t name;
+		uint16_t type;
+		uint16_t class;
+		uint32_t ttl;
+		uint16_t len;
+	};
+
+	struct flag * f;
+
+	f = (struct flag *)(&d_header->flags);
+
 	fprintf(fp, "\n======== DNS data ========\n");
 	fprintf(fp, " -DNS id: 0x%x\n", d_header->xid);
 	fprintf(fp, " -DNS Flags: %d\n", d_header->flags);
-
-	fprintf(fp, " -questions: %d\n", d_header-> qdcount);
-	fprintf(fp, " -answer RRs: %d\n", d_header-> ancount);
-	fprintf(fp, " -auth RRs: %d\n", d_header-> nscount);
-	fprintf(fp, " -additional RRs: %d\n", d_header-> arcount);
+	fprintf(fp, " -DNS Flags QR: %d\n", f->QR);
+	fprintf(fp, " -DNS Flags opcode: %d\n", f->opcode);
+	fprintf(fp, " -DNS Flags AA: %d\n", f->AA);
+	fprintf(fp, " -DNS Flags TC: %d\n", f->TC);
+	fprintf(fp, " -DNS Flags RD: %d\n", f->RD);
+	fprintf(fp, " -DNS Flags RA: %d\n", f->RA);
+	fprintf(fp, " -DNS Flags zero: %d\n", f->zero);
+	fprintf(fp, " -DNS Flags recode: %d\n", f->recod);
+	fprintf(fp, " -questions: %d\n", d_header-> qdcount/256);
+	fprintf(fp, " -answer RRs: %d\n", d_header-> ancount/256);
+	fprintf(fp, " -auth RRs: %d\n", d_header-> nscount/256);
+	fprintf(fp, " -additional RRs: %d\n", d_header-> arcount/256);
 
 	fprintf(fp, " -question name: ");
 	
 	data = (char*)d_question;
-
-	while (1){
-		if (data[index] == 0x00){
-			break;
+	
+	for (int i = 0; i < d_header->qdcount / 256 ; i++){
+		while (1){
+			if (data[index] == 0x00){
+				fprintf(fp, "\n");
+				break;
+			}
+			if ('A' <= data[index] && data[index] <= 'z'){
+				fprintf(fp, "%c", data[index]);
+			}
+			else {
+				fprintf(fp, ".");
+			}
+			index ++;
 		}
-		fprintf(fp, "%c", data[index]);
-		index ++;
+		
+		data = data + (index) * sizeof(char) + sizeof(char);
+		fprintf(fp, " -qtype: %x, %x\n", data[0], data[1]);
+		fprintf(fp, " -qclass: %x, %x\n", data[2], data[3]);
+
+		data = data + 4 * sizeof(char);
+		index = 0;
 	}
+
+	for (int j = 0; j < d_header->ancount/256 ; j++){
+			
+		fprintf(fp, " -ttl: %x, %x, %x, %x\n", data[6], data[7], data[8], data[9]);
+		fprintf(fp, " -answer len: %x, %x\n", data[10], data[11]);
+		fprintf(fp, " -answer IP: ");
+
+		for (int k = 0; k < data[11]; k++){
+			fprintf(fp, "%d.", data[k + 1 + 11]);
+		}
+		fprintf(fp, "\n");
+		
+		break;
+	}
+
+
+
+
+	
 }
 
 
